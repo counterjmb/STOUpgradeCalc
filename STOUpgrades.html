@@ -1,0 +1,142 @@
+<!DOCTYPE HTML>
+<html><head>
+  
+  <meta content="text/html; charset=ISO-8859-1" http-equiv="content-type">
+
+  
+  <link type="text/css" rel="stylesheet" href="STOStyle.css">
+  <title>STO Upgrade Calculator</title>
+
+  
+</head>
+<body>
+<div id="wrapper">
+<form action="" name="upgradeFrom">
+  <table>
+    <tbody>
+      <tr>
+        <td>Needed TP</td>
+        <td> - </td>
+        <td>Current TP</td>
+        <td>Difference </td>
+      </tr>
+      <tr>
+        <td><input name="TPNeeded" value="0"></td>
+        <td> - </td>
+        <td><input  name="TPCurrent" value="0"></td>
+        <td id="TPdifference"><br>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <table>
+    <tbody>
+      <tr>
+        <td colspan="5" rowspan="1" >Kit EC Costs <span class="note">*Based on basic crafting costs.</span>  </td>
+      </tr>
+      <tr>
+        <td >Superior<br>
+        </td>
+        <td >
+        </td>
+        <td >Improved<br>
+        </td>
+        <td >
+        </td>
+        <td >Basic<br>
+        </td>
+      </tr>
+      <tr>
+        <td ><input name="SupEC" value="7500"><br>
+        </td>
+        <td ><br>
+        </td>
+        <td ><input name="ImpEC" value="2500"><br>
+        </td>
+        <td ><br>
+        </td>
+        <td ><input name="BasEC" value="1000"></td>
+      </tr>
+    </tbody>
+  </table>
+  <br>
+
+
+  <button class="button black" type="button" onclick="Calculate()">Calculate</button>
+  <button class="button black" type="reset" name="Reset">Reset</button>
+</form>
+<div class="content">
+<h4>Basic Needs</h4>
+<table>
+  <tbody>
+    <tr>
+      <td ><br>
+      </td>
+      <td >Kits needed<br>
+      </td>
+      <td >Dilithium<br>
+      </td>
+      <td >EC<br>
+      </td>
+      <td >Overflow<br>
+      </td>
+    </tr>
+    <tr>
+      <td >Superior</td>
+      <td ><span id="SupiorKits">0</span>      </td>
+      <td ><span id="SuperiorDil">0</span></td>
+      <td ><span id="SuperiorEC">0</span></td>
+      <td > <span id="SupiorOver">0</span></td>
+    </tr>
+    <tr>
+      <td >Improved      </td>
+      <td ><span id="ImprovedKits">0</span>       </td>
+      <td >  <span id="ImprovedDil">0</span>    </td>
+      <td >    <span id="ImprovedEC">0</span>   </td>
+      <td >    <span id="ImprovedOver">0</span>   </td>
+    </tr>
+    <tr>
+      <td >Basic<br>
+      </td>
+      <td ><span id="BasicKits">0</span>       </td>
+      <td > <span id="BasicDil">0</span>     </td>
+      <td > <span id="BasicEC">0</span>       </td>
+      <td ><span id="BasicOver">0</span>      </td>
+    </tr>
+  </tbody>
+</table>
+
+
+</div>
+<div class="content">
+<h4>Optimal Needs for TP (minimal overflow).</h4>
+<table>
+  <tbody>
+    <tr>
+      <td >Kits<br>
+      </td>
+      <td ><span id="OptSupiorKits">0</span> Superior kits, <span id="OptImprovedKits">0</span> Improved kits, <span id="OptBasicKits">0</span> basic kits      </td>
+    </tr>
+    <tr>
+      <td >Dilithium    </td>
+      <td ><span id="OptDIl">0</span></td>
+    </tr>
+    <tr>
+      <td >EC
+      </td>
+      <td > <span id="OptEC">0</span>     </td>
+    </tr>
+    <tr>
+      <td >Overflow      </td>
+      <td >  <span id="OptOver">0</span>    </td>
+    </tr>
+  </tbody>
+</table>
+
+</div>
+<br>
+<br>
+</div>
+
+<script type="text/javascript" src="calculations.js"></script>
+</body></html>
